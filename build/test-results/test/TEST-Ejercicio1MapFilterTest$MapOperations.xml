@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Parte A: Operaciones con Map" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-30T17:32:17" hostname="213-03" time="0.117">
-  <properties/>
-  <testcase name="Debe calcular precios con descuento aplicado" classname="Ejercicio1MapFilterTest$MapOperations" time="0.01"/>
-  <testcase name="Debe crear etiquetas descriptivas para cada producto" classname="Ejercicio1MapFilterTest$MapOperations" time="0.067"/>
-  <testcase name="Debe obtener una lista con solo los nombres de los productos" classname="Ejercicio1MapFilterTest$MapOperations" time="0.01"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -26,6 +26,8 @@ class GestorTareas {
     // Parte A: Operaciones con Find
 
     fun encontrarPrimeraTareaUrgente(tareas: List<Tarea>): Tarea? {
+        val tareaPrioridadTres = tareas.find { it.prioridad == 3 }
+        return tareaPrioridadTres
         TODO("Implementar: Debe encontrar la primera tarea con prioridad 3")
     }
 
@@ -33,6 +35,8 @@ class GestorTareas {
         tareas: List<Tarea>,
         id: Int,
     ): Tarea? {
+        val tareasId = tareas.find { it.id == id }
+        return tareasId
         TODO("Implementar: Debe encontrar la tarea con el ID especificado")
     }
 
@@ -40,6 +44,8 @@ class GestorTareas {
         tareas: List<Tarea>,
         etiqueta: String,
     ): Tarea? {
+        val tareaIncompleta = tareas.find { tarea -> !tarea.completada && tarea.etiquetas.any { it == etiqueta } }
+        return tareaIncompleta
         TODO("Implementar: Debe encontrar la primera tarea no completada con la etiqueta especificada")
     }
 

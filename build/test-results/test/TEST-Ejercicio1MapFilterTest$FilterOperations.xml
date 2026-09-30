@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Parte B: Operaciones con Filter" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-30T17:32:16" hostname="213-03" time="0.136">
-  <properties/>
-  <testcase name="Debe filtrar productos por rango de precio" classname="Ejercicio1MapFilterTest$FilterOperations" time="0.109"/>
-  <testcase name="Debe filtrar productos por categoría" classname="Ejercicio1MapFilterTest$FilterOperations" time="0.006"/>
-  <testcase name="Debe filtrar productos en stock" classname="Ejercicio1MapFilterTest$FilterOperations" time="0.003"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
