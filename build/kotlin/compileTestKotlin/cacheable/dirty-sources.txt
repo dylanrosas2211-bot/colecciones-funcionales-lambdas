@@ -1,5 +1,0 @@
-/home/etec/Documentos/colecciones-funcionales-lambdas/src/test/kotlin/Ejercicio3SortByLambdaTest.kt
-/home/etec/Documentos/colecciones-funcionales-lambdas/src/test/kotlin/Ejercicio4FuncionesComoArgumentosTest.kt
-/home/etec/Documentos/colecciones-funcionales-lambdas/src/test/kotlin/Ejercicio1MapFilterTest.kt
-/home/etec/Documentos/colecciones-funcionales-lambdas/src/test/kotlin/Ejercicio2FindAnyAllTest.kt
-/home/etec/Documentos/colecciones-funcionales-lambdas/src/test/kotlin/Ejercicio5ItScopeFunctionsTest.kt

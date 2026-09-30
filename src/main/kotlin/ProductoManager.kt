@@ -7,7 +7,7 @@
  * IMPORTANTE: No modifiques la firma de los métodos, solo implementa su lógica.
  */
 
-data class Producto(
+data class Producto (
     val id: Int,
     val nombre: String,
     val precio: Double,
@@ -45,6 +45,8 @@ class ProductoManager {
     // Parte B: Operaciones con Filter
 
     fun obtenerProductosEnStock(productos: List<Producto>): List<Producto> {
+        return productos.filter { producto -> producto.enStock}
+
         TODO("Implementar: Debe retornar solo los productos que están en stock")
     }
 
@@ -53,6 +55,7 @@ class ProductoManager {
         precioMin: Double,
         precioMax: Double,
     ): List<Producto> {
+        return productos.filter { producto -> precioMin < producto.precio && precioMax < producto.precio}
         TODO("Implementar: Debe retornar productos cuyo precio esté entre precioMin y precioMax")
     }
 
@@ -60,12 +63,15 @@ class ProductoManager {
         productos: List<Producto>,
         categoria: String,
     ): List<Producto> {
+        return productos.filter {producto -> producto.categoria == categoria}
         TODO("Implementar: Debe retornar solo los productos de la categoría especificada")
     }
 
     // Parte C: Combinación de Map y Filter
 
     fun obtenerNombresProductosDisponibles(productos: List<Producto>): List<String> {
+        val productosEnStock=  productos.filter { producto -> producto.enStock}
+        return productosEnStock.map {it.nombre }
         TODO("Implementar: Debe filtrar productos en stock y retornar sus nombres")
     }
 
