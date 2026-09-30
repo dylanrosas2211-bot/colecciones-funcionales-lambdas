@@ -7,7 +7,7 @@
  * IMPORTANTE: No modifiques la firma de los métodos, solo implementa su lógica.
  */
 
-data class Producto (
+data class Producto(
     val id: Int,
     val nombre: String,
     val precio: Double,
@@ -19,7 +19,7 @@ class ProductoManager {
     // Parte A: Operaciones con Map
 
     fun obtenerNombres(productos: List<Producto>): List<String> {
-    productos.map { it.nombre }
+        return productos.map { it.nombre }
         TODO("Implementar: Debe retornar una lista con solo los nombres de los productos")
     }
 
@@ -27,17 +27,15 @@ class ProductoManager {
         productos: List<Producto>,
         descuentoPorcentaje: Double,
     ): List<Double> {
-        productos.map { producto -> {
-            val precioConDescuento = producto.precio - ((producto.precio/100) * descuentoPorcentaje)
-            precioConDescuento
-        } }
+        return productos.map { producto ->
+            producto.precio - ((producto.precio / 100) * descuentoPorcentaje)
+        }
         TODO("Implementar: Debe retornar una lista con los precios después de aplicar el descuento")
     }
 
     fun generarEtiquetas(productos: List<Producto>): List<String> {
-        productos.map {producto -> {
-            "nombre - ${producto.precio} (estado)"
-        }
+        return productos.map { producto ->
+            "${producto.nombre} - $${producto.precio} (${if (producto.enStock) "Disponible" else "Agotado"})"
         }
         TODO("Implementar: Debe generar etiquetas en formato 'nombre - \$precio (estado)'")
     }
@@ -45,7 +43,7 @@ class ProductoManager {
     // Parte B: Operaciones con Filter
 
     fun obtenerProductosEnStock(productos: List<Producto>): List<Producto> {
-        return productos.filter { producto -> producto.enStock}
+        return productos.filter { producto -> producto.enStock }
 
         TODO("Implementar: Debe retornar solo los productos que están en stock")
     }
@@ -55,7 +53,7 @@ class ProductoManager {
         precioMin: Double,
         precioMax: Double,
     ): List<Producto> {
-        return productos.filter { producto -> precioMin < producto.precio && precioMax < producto.precio}
+        return productos.filter { producto -> precioMin <= producto.precio && precioMax >= producto.precio }
         TODO("Implementar: Debe retornar productos cuyo precio esté entre precioMin y precioMax")
     }
 
@@ -63,15 +61,15 @@ class ProductoManager {
         productos: List<Producto>,
         categoria: String,
     ): List<Producto> {
-        return productos.filter {producto -> producto.categoria == categoria}
+        return productos.filter { producto -> producto.categoria == categoria }
         TODO("Implementar: Debe retornar solo los productos de la categoría especificada")
     }
 
     // Parte C: Combinación de Map y Filter
 
     fun obtenerNombresProductosDisponibles(productos: List<Producto>): List<String> {
-        val productosEnStock=  productos.filter { producto -> producto.enStock}
-        return productosEnStock.map {it.nombre }
+        val productosEnStock = productos.filter { producto -> producto.enStock }
+        return productosEnStock.map { it.nombre }
         TODO("Implementar: Debe filtrar productos en stock y retornar sus nombres")
     }
 
@@ -80,6 +78,8 @@ class ProductoManager {
         categoria: String,
         descuentoPorcentaje: Double,
     ): List<Double> {
+        val productosConDescuento = productos.filter { producto -> producto.categoria == categoria }
+        return productosConDescuento.map { producto -> producto.precio - ((producto.precio / 100) * descuentoPorcentaje) }
         TODO("Implementar: Debe aplicar descuento solo a productos de la categoría especificada")
     }
 
@@ -87,6 +87,8 @@ class ProductoManager {
         productos: List<Producto>,
         precioMinimo: Double,
     ): List<String> {
+        val productosCaros = productos.filter { producto -> precioMinimo <= producto.precio }
+        return productosCaros.map { producto -> "PRODUCTO PREMIUM: ${producto.nombre} ($${producto.precio})" }
         TODO("Implementar: Debe generar reporte de productos caros disponibles en formato especial")
     }
 }

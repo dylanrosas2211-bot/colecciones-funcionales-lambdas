@@ -1,31 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Parte B: Operaciones con Filter" tests="3" skipped="0" failures="2" errors="0" timestamp="2026-09-30T15:21:27" hostname="213-03" time="0.08">
+<testsuite name="Parte B: Operaciones con Filter" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-30T17:32:16" hostname="213-03" time="0.136">
   <properties/>
-  <testcase name="Debe filtrar productos por rango de precio" classname="Ejercicio1MapFilterTest$FilterOperations" time="0.063">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;2&gt; but was: &lt;1&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;2&gt; but was: &lt;1&gt;
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
-	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
-	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
-	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
-	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
-	at app//Ejercicio1MapFilterTest$FilterOperations.filtrarPorRangoDePrecio(Ejercicio1MapFilterTest.kt:104)
-	at java.base@21.0.12.1/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base@21.0.12.1/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
-  <testcase name="Debe filtrar productos por categoría" classname="Ejercicio1MapFilterTest$FilterOperations" time="0.007">
-    <failure message="kotlin.NotImplementedError: An operation is not implemented: Implementar: Debe retornar solo los productos de la categoría especificada" type="kotlin.NotImplementedError">kotlin.NotImplementedError: An operation is not implemented: Implementar: Debe retornar solo los productos de la categoría especificada
-	at ProductoManager.filtrarPorCategoria(ProductoManager.kt:66)
-	at Ejercicio1MapFilterTest$FilterOperations.filtrarPorCategoria(Ejercicio1MapFilterTest.kt:119)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
+  <testcase name="Debe filtrar productos por rango de precio" classname="Ejercicio1MapFilterTest$FilterOperations" time="0.109"/>
+  <testcase name="Debe filtrar productos por categoría" classname="Ejercicio1MapFilterTest$FilterOperations" time="0.006"/>
   <testcase name="Debe filtrar productos en stock" classname="Ejercicio1MapFilterTest$FilterOperations" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

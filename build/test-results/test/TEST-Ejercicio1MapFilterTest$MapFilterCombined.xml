@@ -1,36 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Parte C: Combinación de Map y Filter" tests="3" skipped="0" failures="3" errors="0" timestamp="2026-09-30T15:21:27" hostname="213-03" time="0.02">
+<testsuite name="Parte C: Combinación de Map y Filter" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-30T17:32:16" hostname="213-03" time="0.121">
   <properties/>
-  <testcase name="Debe aplicar descuento solo a productos de cierta categoría" classname="Ejercicio1MapFilterTest$MapFilterCombined" time="0.005">
-    <failure message="kotlin.NotImplementedError: An operation is not implemented: Implementar: Debe aplicar descuento solo a productos de la categoría especificada" type="kotlin.NotImplementedError">kotlin.NotImplementedError: An operation is not implemented: Implementar: Debe aplicar descuento solo a productos de la categoría especificada
-	at ProductoManager.aplicarDescuentoCategoria(ProductoManager.kt:80)
-	at Ejercicio1MapFilterTest$MapFilterCombined.descuentoPorCategoria(Ejercicio1MapFilterTest.kt:156)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
-  <testcase name="Debe generar reporte de productos caros disponibles" classname="Ejercicio1MapFilterTest$MapFilterCombined" time="0.007">
-    <failure message="kotlin.NotImplementedError: An operation is not implemented: Implementar: Debe generar reporte de productos caros disponibles en formato especial" type="kotlin.NotImplementedError">kotlin.NotImplementedError: An operation is not implemented: Implementar: Debe generar reporte de productos caros disponibles en formato especial
-	at ProductoManager.generarReporteProductosCaros(ProductoManager.kt:87)
-	at Ejercicio1MapFilterTest$MapFilterCombined.reporteProductosCaros(Ejercicio1MapFilterTest.kt:177)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
-  <testcase name="Debe obtener nombres de productos en stock" classname="Ejercicio1MapFilterTest$MapFilterCombined" time="0.003">
-    <failure message="kotlin.NotImplementedError: An operation is not implemented: Implementar: Debe filtrar productos en stock y retornar sus nombres" type="kotlin.NotImplementedError">kotlin.NotImplementedError: An operation is not implemented: Implementar: Debe filtrar productos en stock y retornar sus nombres
-	at ProductoManager.obtenerNombresProductosDisponibles(ProductoManager.kt:72)
-	at Ejercicio1MapFilterTest$MapFilterCombined.nombresDeProductosEnStock(Ejercicio1MapFilterTest.kt:141)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-</failure>
-  </testcase>
+  <testcase name="Debe aplicar descuento solo a productos de cierta categoría" classname="Ejercicio1MapFilterTest$MapFilterCombined" time="0.014"/>
+  <testcase name="Debe generar reporte de productos caros disponibles" classname="Ejercicio1MapFilterTest$MapFilterCombined" time="0.076"/>
+  <testcase name="Debe obtener nombres de productos en stock" classname="Ejercicio1MapFilterTest$MapFilterCombined" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

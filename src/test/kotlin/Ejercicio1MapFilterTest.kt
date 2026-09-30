@@ -179,6 +179,7 @@ class Ejercicio1MapFilterTest {
             assertEquals(
                 listOf(
                     "PRODUCTO PREMIUM: Laptop Premium ($2000.0)",
+                    "PRODUCTO PREMIUM: Monitor 4K ($800.0)",
                     "PRODUCTO PREMIUM: Tablet ($600.0)"
                 ),
                 reporte
