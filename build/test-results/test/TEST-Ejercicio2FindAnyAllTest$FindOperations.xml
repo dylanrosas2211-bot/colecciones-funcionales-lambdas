@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Parte A: Operaciones con Find" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-09-30T21:13:21" hostname="213-03" time="0.088">
+<testsuite name="Parte A: Operaciones con Find" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-07T14:53:27" hostname="213-20" time="0.054">
   <properties/>
-  <testcase name="Debe encontrar primera tarea sin completar con etiqueta específica" classname="Ejercicio2FindAnyAllTest$FindOperations" time="0.088"/>
+  <testcase name="Debe encontrar la primera tarea de alta prioridad" classname="Ejercicio2FindAnyAllTest$FindOperations" time="0.054"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

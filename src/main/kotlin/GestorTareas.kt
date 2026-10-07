@@ -52,6 +52,8 @@ class GestorTareas {
     // Parte B: Operaciones con Any
 
     fun hayTareasUrgentesPendientes(tareas: List<Tarea>): Boolean {
+        val existeTareaPendiente = tareas.any { it.prioridad == 3 && !it.completada }
+        return existeTareaPendiente
         TODO("Implementar: Debe verificar si hay alguna tarea urgente (prioridad 3) sin completar")
     }
 
@@ -59,6 +61,8 @@ class GestorTareas {
         tareas: List<Tarea>,
         horasLimite: Int,
     ): Boolean {
+        val existeTareaQueSupereLimite = tareas.any { it.tiempoEstimadoHoras > horasLimite }
+        return existeTareaQueSupereLimite
         TODO("Implementar: Debe verificar si alguna tarea supera el límite de horas especificado")
     }
 
@@ -66,16 +70,22 @@ class GestorTareas {
         tareas: List<Tarea>,
         etiqueta: String,
     ): Boolean {
+        val existeTareaConEtiquetaEspecificada = tareas.any { tarea -> tarea.etiquetas.any { it == etiqueta } }
+        return existeTareaConEtiquetaEspecificada
         TODO("Implementar: Debe verificar si existe alguna tarea con la etiqueta especificada")
     }
 
     // Parte C: Operaciones con All
 
     fun todasCompletadas(tareas: List<Tarea>): Boolean {
+        val tareasCompletadas = tareas.all { it.completada }
+        return tareasCompletadas
         TODO("Implementar: Debe verificar si todas las tareas están completadas")
     }
 
     fun todasTienenEtiquetas(tareas: List<Tarea>): Boolean {
+        val tareasConEtiquetas = tareas.all { it.etiquetas.isNotEmpty() }
+        return tareasConEtiquetas
         TODO("Implementar: Debe verificar si todas las tareas tienen al menos una etiqueta")
     }
 
@@ -83,30 +93,48 @@ class GestorTareas {
         tareas: List<Tarea>,
         horasMaximo: Int,
     ): Boolean {
+        val tareasDentroDelLimiteDeHora = tareas.all { it.tiempoEstimadoHoras <= horasMaximo }
+        return tareasDentroDelLimiteDeHora
         TODO("Implementar: Debe verificar si todas las tareas están dentro del límite de horas")
     }
 
     // Parte D: Combinación de Find, Any y All
 
     fun proyectoListoParaEntrega(tareas: List<Tarea>): Boolean {
+        val tareasDePrioridadTres = tareas
+            .filter { it.prioridad == 3 }
+        val todasLasTareasConAltaPrioridadCompletadas = tareasDePrioridadTres.all { it.completada }
+        val existeUnaTareaConEtiquetaBlocker = tareas
+            .any { tarea -> tarea.etiquetas.any { it == "blocker" } && !tarea.completada }
+        val existeTareaDeDocumentacionCompletada = tareas
+            .any { tarea -> tarea.etiquetas.any { it == "docs" } && tarea.completada }
+        return todasLasTareasConAltaPrioridadCompletadas && !existeUnaTareaConEtiquetaBlocker && existeTareaDeDocumentacionCompletada
         TODO(
-            """
+            """           
             Implementar: Un proyecto está listo si:
             - Todas las tareas de prioridad alta (3) están completadas
             - No hay ninguna tarea pendiente con etiqueta "blocker"
             - Existe al menos una tarea de documentación completada
-        """,
+         """
         )
     }
 
     fun generarResumenEstado(tareas: List<Tarea>): EstadoProyecto {
+        val hayTareasCriticasPendientes = tareas.any { it.prioridad == 3 && !it.completada }
+        val totalHorasPendientes = tareas.filter { !it.completada }.map { it.tiempoEstimadoHoras }.sum()
+        val todosLosBugsResueltos = tareas.filter { tarea -> tarea.etiquetas.any { it == "bug" } }
+            .all { tarea -> tarea.completada }
+        return EstadoProyecto(
+            hayTareasCriticasPendientes, totalHorasPendientes, todosLosBugsResueltos
+        )
+
         TODO(
             """
             Implementar: Debe generar un resumen con:
             - hayTareasCriticasPendientes: si hay tareas de prioridad 3 sin completar
             - totalHorasPendientes: suma de horas de tareas no completadas
             - todosLosBugsResueltos: si todas las tareas con etiqueta "bug" están completadas
-        """,
+        """
         )
     }
 }
