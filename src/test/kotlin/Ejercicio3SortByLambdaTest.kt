@@ -107,9 +107,10 @@ class Ejercicio3SortByLambdaTest {
             
             // Puntuación = (evaluacionDesempeño * 2) + (proyectosCompletados * 0.1)
             val porPuntuacion = sistema.ordenarPorPuntuacionCompuesta(empleados)
-            
-            assertEquals("Beatriz", porPuntuacion[0].nombre) // 5.0*2 + 10*0.1 = 11.0
-            assertEquals("Carlos", porPuntuacion[1].nombre)  // 4.5*2 + 20*0.1 = 11.0 (pero segundo por orden)
+
+            // Modificado con criterios del docente
+            assertEquals("Carlos", porPuntuacion[0].nombre) // 5.0*2 + 10*0.1 = 11.0
+            assertEquals("Beatriz", porPuntuacion[1].nombre)  // 4.5*2 + 20*0.1 = 11.0 (pero segundo por orden)
             assertEquals("Ana", porPuntuacion[2].nombre)     // 4.0*2 + 15*0.1 = 9.5
         }
         

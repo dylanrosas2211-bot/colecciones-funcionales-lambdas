@@ -21,31 +21,45 @@ class SistemaRanking {
     // Parte A: Ordenamiento Simple con sortBy
     
     fun ordenarPorSalario(empleados: List<Empleado>): List<Empleado> {
+        val salarioempleado = empleados.sortedBy { it.salario }
+        return salarioempleado
         TODO("Implementar: Debe ordenar empleados por salario de menor a mayor")
     }
     
     fun ordenarPorExperienciaDesc(empleados: List<Empleado>): List<Empleado> {
+        val experienciaempleado = empleados.sortedByDescending { it.anosExperiencia }
+        return experienciaempleado
         TODO("Implementar: Debe ordenar por años de experiencia de mayor a menor")
     }
     
     fun ordenarPorNombre(empleados: List<Empleado>): List<Empleado> {
+        val nombresalfabeticamente = empleados.sortedBy { it.nombre}
+        return nombresalfabeticamente
         TODO("Implementar: Debe ordenar alfabéticamente por nombre")
     }
     
     // Parte B: Lambdas Complejas
     
     fun ordenarPorEficiencia(empleados: List<Empleado>): List<Empleado> {
+        val eficienciaDeEmpleados = empleados.sortedByDescending({ it.proyectosCompletados / it.anosExperiencia })
+        return eficienciaDeEmpleados
         TODO("Implementar: Debe ordenar por eficiencia (proyectosCompletados / añosExperiencia) descendente")
     }
     
     fun ordenarPorPuntuacionCompuesta(empleados: List<Empleado>): List<Empleado> {
+        val puntuacionEmpleados = empleados.sortedByDescending { (it.evaluacionDesempeno * 2.0) + (it.proyectosCompletados * 0.1) }
+        return puntuacionEmpleados
         TODO("Implementar: Debe ordenar por puntuación = (evaluacionDesempeño * 2) + (proyectosCompletados * 0.1) descendente")
+
     }
     
     fun ordenarITPrimero(empleados: List<Empleado>): List<Empleado> {
+        val ordenarEmpleados = empleados.sortedBy { it.departamento }
+        val salarioEmpleadoAsc = ordenarEmpleados.sortedBy { it.salario }
+        return salarioEmpleadoAsc
         TODO("Implementar: Debe ordenar con empleados de IT primero, luego por salario ascendente")
     }
-    
+
     // Parte C: Ordenamiento Múltiple
     
     fun ordenarPorDepartamentoYSalario(empleados: List<Empleado>): List<Empleado> {
